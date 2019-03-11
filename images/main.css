@@ -3,10 +3,13 @@ footer {
     border-top: 2px solid red;
 }
 
+#activities .img-thumbnail {
+    border-radius: 100%;
+}
 
 .parallax-perigord {
     /* The image used */
-    background-image: url("images/IMG_0284.JPG");
+    background-image: url("IMG_0284.JPG");
   
     /* Set a specific height */
     height: 500px;
