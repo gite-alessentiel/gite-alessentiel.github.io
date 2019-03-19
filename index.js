@@ -6,10 +6,6 @@ import './js/map';
 // import './js/hello.week.min';
 // import './js/calendar.js';
 
-import('https://maps.googleapis.com/maps/api/js?key=AIzaSyBOKNVB5xJvCxtydI_hipGLoeamhzpp00Y&callback=initMap').then(() => {
-    console.log("prout !");
-});
-
 window.initMap = function() {
     var alessentiel = {lat: 45.2075138, lng: 1.1136933};
     // The map, centered at Grange d'Ans
