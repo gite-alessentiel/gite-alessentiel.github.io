@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    ${require('./src/partials/head.html')}
+    <title>Gîte Alessentiel - au coeur du Perigord Noir</title>
+</head>
+<body>
+${require('./src/partials/menu.html')}
+
+<main role="main" class="container">
+
+    <div class="row">
+        <h1>contact</h1>
+    </div>
+    <div class="row">
+        <form id="contact" class="needs-validation" novalidate>
+            <div class="form-group">
+                <label for="email">Email*:</label>
+                <input type="email" class="form-control" id="email" placeholder="mon-email@exemple.fr" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Nom*:</label>
+                <input type="text" class="form-control" id="name" placeholder="Prénom Nom" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Téléphone:</label>
+                <input type="text" class="form-control" id="phone" placeholder="06 xx xx xx xx">
+            </div>
+            <div class="form-group">
+                <label for="message">Message*:</label>
+                <textarea class="form-control" id="message" rows="10" required></textarea>
+            </div>
+            <div class="text-right">
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+            </div>
+        </form>
+    </div>
+
+    ${require('./src/partials/footer.html')}
+</main><!-- /.container -->
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+        'use strict';
+        $("#contact").on("submit", function (event) {
+            if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+        })
+    })();
+</script>
+</body>
+</html>

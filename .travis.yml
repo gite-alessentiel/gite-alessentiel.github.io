@@ -1,0 +1,18 @@
+
+before_script:
+  - openssl aes-256-cbc -K $encrypted_12c8071d2874_key -iv $encrypted_12c8071d2874_iv -in auth.json.enc -out auth.json -d
+  - npm install
+
+script:
+  - npm run build
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GH_TOKEN
+  keep-history: true
+  local-dir: dist/
+  target-branch: master
+  on:
+    branch: develop
+

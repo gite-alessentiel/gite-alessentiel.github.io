@@ -1,12 +1,13 @@
 const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     devtool: 'eval-cheap-module-source-map',
     entry: './src/index.js',
     devServer: {
-        port: 8080,
+        port: 1234,
         contentBase: path.join(__dirname, "dist")
     },
     node: {
@@ -14,6 +15,10 @@ module.exports = {
     },
     module: {
         rules: [
+            {
+                test: /\.html$/,
+                use: ["html-loader?interpolate"]
+            },
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
@@ -78,5 +83,24 @@ module.exports = {
             template: './gites.html',
             inject: true
         }),
+        new HtmlWebpackPlugin({
+            filename: 'sejour.html',
+            template: './sejour.html',
+            inject: true
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'tarifs.html',
+            template: './tarifs.html',
+            inject: true
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'contact.html',
+            template: './contact.html',
+            inject: true
+        }),
+        new CopyPlugin([
+            {context: './node_modules/hello-week/', from: 'dist/langs/*'},
+            {from: 'robots.txt'},
+        ])
     ]
 };

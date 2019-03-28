@@ -3,6 +3,7 @@ const path = require('path');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin'); //installed via npm
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
@@ -20,6 +21,10 @@ module.exports = {
     },
     module: {
         rules: [
+            {
+                test: /\.html$/,
+                use: ["html-loader?interpolate"]
+            },
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
@@ -78,9 +83,32 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: './index.html',
-            // Inject the js bundle at the end of the body of the given template
-            inject: 'body',
+            inject: true
         }),
+        new HtmlWebpackPlugin({
+            filename: 'gites.html',
+            template: './gites.html',
+            inject: true
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'sejour.html',
+            template: './sejour.html',
+            inject: true
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'tarifs.html',
+            template: './tarifs.html',
+            inject: true
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'contact.html',
+            template: './contact.html',
+            inject: true
+        }),
+        new CopyPlugin([
+            {context: './node_modules/hello-week/', from: 'dist/langs/*'},
+            {from: 'robots.txt'},
+        ]),
         new CleanWebpackPlugin(buildPath),
         new FaviconsWebpackPlugin({
             // Your source logo
