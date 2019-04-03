@@ -101,6 +101,7 @@ module.exports = {
         new CopyPlugin([
             {context: './node_modules/hello-week/', from: 'dist/langs/*'},
             {from: 'robots.txt'},
+            {from: 'images/logo.png'},
         ])
     ]
 };
