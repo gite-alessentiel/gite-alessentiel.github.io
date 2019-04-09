@@ -8,9 +8,18 @@
 ${require('./src/partials/menu.html')}
 
 <main role="main" class="container">
-
     <div class="row">
-        <h1>contact</h1>
+        <h1>Accès</h1>
+    </div>
+    <div class="row">
+        Le gite est situé en Haut Périgord Noir sur la commune de Granges d’Ans, à mi chemin entre Périgueux et Brive la Gaillarde, à 10 kms au sud d’Hautefort, et à 20 kms  au nord de Montignac, à moins de 10 minutes d’une sortie d’autoroute.
+    </div>
+
+    <div id="map">
+
+    </div>
+    <div class="row">
+        <h1>Contact</h1>
     </div>
     <div class="row">
         <form id="contact" class="needs-validation" novalidate>
@@ -51,5 +60,9 @@ ${require('./src/partials/menu.html')}
         })
     })();
 </script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOKNVB5xJvCxtydI_hipGLoeamhzpp00Y&callback=initMap">
+</script>
+
 </body>
 </html>

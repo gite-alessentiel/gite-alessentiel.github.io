@@ -10,9 +10,112 @@ ${require('./src/partials/menu.html')}
 <main role="main" class="container">
 
     <div class="row">
-        <h1>tarifs</h1>
+        <h1>Les tarifs</h1>
     </div>
 
+    <div class="row">
+        <div class="col-sm table-responsive-sm">
+            <h2>Tarif pour le logement 2 personnes</h2>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">&nbsp;</th>
+                    <th scope="col">1 nuit</th>
+                    <th scope="col">2 nuits</th>
+                    <th scope="col">4 nuits</th>
+                    <th scope="col">7 nuits</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">Haute saison juillet /aout</th>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>540€</td>
+                </tr>
+                <tr>
+                    <th scope="row">Moyenne saison vacances scolaires, juin et septembre</th>
+                    <td>N/A</td>
+                    <td>158€</td>
+                    <td>299€</td>
+                    <td>425€</td>
+                </tr>
+                <tr>
+                    <th scope="row">Basse saison tout le reste</th>
+                    <td>72€</td>
+                    <td>134€</td>
+                    <td>253€</td>
+                    <td>360€</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm table-responsive-sm">
+            <h2>Tarif pour le logement 8 personnes</h2>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">&nbsp;</th>
+                    <th scope="col">1 nuit</th>
+                    <th scope="col">2 nuits</th>
+                    <th scope="col">4 nuits</th>
+                    <th scope="col">7 nuits</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">Haute saison juillet /aout</th>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>970€</td>
+                </tr>
+                <tr>
+                    <th scope="row">Moyenne saison vacances scolaires, juin et septembre</th>
+                    <td>N/A</td>
+                    <td>440€</td>
+                    <td>510€</td>
+                    <td>745€</td>
+                </tr>
+                <tr>
+                    <th scope="row">Basse saison tout le reste</th>
+                    <td>280€</td>
+                    <td>360€</td>
+                    <td>440€</td>
+                    <td>630€</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm">
+            Les tarifs ci dessous comprennent:
+            <ul>
+                <li>lits faits à l'arrivée</li>
+                <li>linge de toilette</li>
+                <li>linge de maison</li>
+                <li>kit épicerie</li>
+                <li>kit ménager</li>
+                <li>taxes de séjour</li>
+                <li>consommation eau et électricité responsable</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <h1>Les disponibilités</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-sm">
+            <div class="hello-week" id="calendar"></div>
+        </div>
+    </div>
     ${require('./src/partials/footer.html')}
 </main><!-- /.container -->
 </body>
