@@ -1,36 +1,39 @@
 require('./styles/index.scss');
 
-import jquery from 'jquery';
+import $ from 'jquery';
+import PopperJs from 'popper.js';
 
 import './js/calendar';
 import initMap from './js/map';
 
+const p = PopperJs;
 
 window.initMap = initMap;
 
-jquery("#contact").on("submit", function (event) {
+$("#contact").on("submit", function (event) {
     let form = event.target;
+    event.preventDefault();
     if (form.checkValidity() === false) {
-        event.preventDefault();
         event.stopPropagation();
+        return;
     }
     form.classList.add('was-validated');
-    jquery.ajax({
-        url: 'https://api.gite-alessentiel.fr/hooks/catch/4750212/73a6m3/',
+    $.ajax({
+        url: 'https://hooks.zapier.com/hooks/catch/4750212/73a6m3/',
         type: 'post',
         data: JSON.stringify(
             {
-                "email": jquery("#email").val(),
-                "phone": jquery("#phone").val(),
-                "message": jquery("#message").val(),
-                "name": jquery("#name").val()
+                "email": $("#email").val(),
+                "phone": $("#phone").val(),
+                "message": $("#message").val().replace(/\n/g, "<br>"),
+                "name": $("#name").val()
             }
         )
-        success
-:
-
-    function () {
-        alert("prout")
-    }
-})
+    })
+        .done(() => {
+            alert("Le message a bien été envoyé")
+        })
+        .fail((error) => {
+            alert("Impossible d'envoyer le message")
+        });
 })

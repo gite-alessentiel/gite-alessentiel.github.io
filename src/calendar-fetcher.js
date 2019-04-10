@@ -27,7 +27,7 @@ calendar.events.list({
     auth: jwtClient,
     calendarId: CALENDAR_ID,
     timeMin: "2019-03-10T00:00:00.000Z",
-    timeMax: "2019-04-11T23:59:59.000Z"
+    timeMax: "2019-12-11T23:59:59.000Z"
 }, function (err, response) {
     if (err) {
         console.log('The API returned an error: ' + err);

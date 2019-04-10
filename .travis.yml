@@ -5,6 +5,7 @@ before_script:
   - npm install
 
 script:
+  - npm run sync
   - npm run build
 
 deploy:
