@@ -24,6 +24,16 @@
     padding-bottom: 20px;
     background-image: url("../../images/landscape-band-prices-2.jpg");
 }
+#acces {
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-image: url("../../images/door.jpg");
+}
+
+.tarifs td {
+    vertical-align: middle;
+}
 
 #sejour {
     padding-top: 20px;
@@ -31,9 +41,15 @@
     background-image: url("../../images/landscape-5-band.jpg");
     color: #FFF;
 }
+.legend-reservations {
+    background-color: rgb(240, 128, 128);
+    color: #FFFFFF;
+    border: 1px solid black;
+    padding: 2px;
+}
 
 #calendar {
-    min-height: 100vh;
+    min-height: 65vh;
 }
 
 footer {
