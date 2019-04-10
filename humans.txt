@@ -1,0 +1,10 @@
+/* TEAM */
+	Runner: Mathieu POUSSE
+	Twitter: @m_pousse
+	From: Rennes, Britany, France
+
+/* SITE */
+	Last update: 2019/04/10
+	Language: French
+	Doctype: HTML5
+	IDE: IntelliJ
