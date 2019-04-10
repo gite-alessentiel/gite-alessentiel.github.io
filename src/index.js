@@ -1,8 +1,6 @@
 require('./styles/index.scss');
 
-import PopperJs from 'popper.js';
 import jquery from 'jquery';
-import bootstrap from "bootstrap";
 
 import './js/calendar';
 import initMap from './js/map';
@@ -10,8 +8,29 @@ import initMap from './js/map';
 
 window.initMap = initMap;
 
+jquery("#contact").on("submit", function (event) {
+    let form = event.target;
+    if (form.checkValidity() === false) {
+        event.preventDefault();
+        event.stopPropagation();
+    }
+    form.classList.add('was-validated');
+    jquery.ajax({
+        url: 'https://api.gite-alessentiel.fr/hooks/catch/4750212/73a6m3/',
+        type: 'post',
+        data: JSON.stringify(
+            {
+                "email": jquery("#email").val(),
+                "phone": jquery("#phone").val(),
+                "message": jquery("#message").val(),
+                "name": jquery("#name").val()
+            }
+        )
+        success
+:
 
-jquery(()=>{
-    console.log('Hello jQuery + bootstrap 4!');
-});
-
+    function () {
+        alert("prout")
+    }
+})
+})
