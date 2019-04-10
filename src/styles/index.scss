@@ -20,10 +20,8 @@ footer {
 
 .row-spacer {
     padding-top: 60px;
-    padding-bottom: 60px;
     @media screen and (max-width: 576px) {
         padding-top: 20px;
-        padding-bottom: 20px;
     }
 }
 
@@ -37,5 +35,5 @@ footer {
 }
 
 main {
-    padding-top: 90px;
+    padding-top: 130px;
 }
