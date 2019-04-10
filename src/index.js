@@ -1,12 +1,14 @@
 require('./styles/index.scss');
 
-import $ from 'jquery';
 import PopperJs from 'popper.js';
-
+import $ from 'jquery';
+import bootstrap from "bootstrap";
 import './js/calendar';
+
 import initMap from './js/map';
 
 const p = PopperJs;
+const b = bootstrap;
 
 window.initMap = initMap;
 
