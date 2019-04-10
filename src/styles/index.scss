@@ -8,11 +8,29 @@
     background-color: grey;
 }
 
+.row-filler {
+    background-color: white;
+}
+
+#gite {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-image: url("../../images/landscape-band.jpg");
+}
+
+#tarifs {
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-image: url("../../images/landscape-band-prices-2.jpg");
+}
+
 #calendar {
     min-height: 100vh;
 }
 
 footer {
+    width: 100%;
     border-top: 2px solid #c8ff46;
     color: #FFF;
 }
@@ -40,5 +58,5 @@ footer {
 }
 
 main {
-    padding-top: 130px;
+    padding-top: 90px;
 }
