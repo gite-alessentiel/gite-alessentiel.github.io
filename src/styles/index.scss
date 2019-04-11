@@ -1,5 +1,26 @@
 @import "~bootstrap/scss/bootstrap";
 
+footer {
+    a:link {
+        color: white;
+    }
+
+    /* visited link */
+    a:visited {
+        color: white;
+    }
+
+    /* mouse over link */
+    a:hover {
+        color: white;
+    }
+
+    /* selected link */
+    a:active {
+        color: white;
+    }
+}
+
 #map {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -24,6 +45,7 @@
     padding-bottom: 20px;
     background-image: url("../../images/landscape-band-prices-2.jpg");
 }
+
 #acces {
     color: white;
     padding-top: 20px;
@@ -41,6 +63,7 @@
     background-image: url("../../images/landscape-5-band.jpg");
     color: #FFF;
 }
+
 .legend-reservations {
     background-color: rgb(240, 128, 128);
     color: #FFFFFF;
@@ -64,6 +87,7 @@ footer {
         padding-bottom: 20px;
     }
 }
+
 .row-spacer {
     padding-top: 60px;
     @media screen and (max-width: 576px) {
