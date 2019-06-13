@@ -103,6 +103,9 @@ module.exports = {
             {from: 'robots.txt'},
             {from: 'humans.txt'},
             {from: 'images/logo.png'},
+            {from: 'favicon.ico'},
+            {from: 'favicon-16x16.png'},
+            {from: 'favicon-32x32.png'},
         ])
     ]
 };
