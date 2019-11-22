@@ -86,8 +86,13 @@ module.exports = {
             inject: true
         }),
         new HtmlWebpackPlugin({
-            filename: 'gites.html',
-            template: './gites.html',
+            filename: 'petit-gite.html',
+            template: './petit-gite.html',
+            inject: true
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'grand-gite.html',
+            template: './grand-gite.html',
             inject: true
         }),
         new HtmlWebpackPlugin({
