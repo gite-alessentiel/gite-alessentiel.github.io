@@ -4,6 +4,12 @@ $dark: #383838;
 
 @import "~bootstrap/scss/bootstrap";
 
+.welcome {
+    h4 {
+        padding-bottom: 10px;
+    }
+}
+
 footer {
     a:link {
         color: white;
