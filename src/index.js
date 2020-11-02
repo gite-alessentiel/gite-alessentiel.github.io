@@ -27,6 +27,7 @@ $("#contact").on("submit", function (event) {
             {
                 "email": $("#email").val(),
                 "phone": $("#phone").val(),
+                "duration": $("#duration").val(),
                 "message": $("#message").val().replace(/\n/g, "<br>"),
                 "name": $("#name").val()
             }
@@ -36,6 +37,6 @@ $("#contact").on("submit", function (event) {
             alert("Le message a bien été envoyé")
         })
         .fail((error) => {
-            alert("Impossible d'envoyer le message")
+            alert("Impossible d'envoyer le message, vous pouvez nous contacter directement avec alessentiel.gite@gmail.com")
         });
 })
