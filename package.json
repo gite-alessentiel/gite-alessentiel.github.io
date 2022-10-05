@@ -38,7 +38,7 @@
         "copy-webpack-plugin": "^5.0.5",
         "css-loader": "^0.28.11",
         "cssnano": "^3.10.0",
-        "favicons-webpack-plugin": "0.0.9",
+        "favicons-webpack-plugin": "6.0.0-alpha.1",
         "file-loader": "^1.1.11",
         "googleapis": "^39.1.0",
         "growl": "^1.10.0",
