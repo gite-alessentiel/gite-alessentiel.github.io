@@ -38,12 +38,12 @@
         "copy-webpack-plugin": "^5.0.5",
         "css-loader": "^0.28.11",
         "cssnano": "^3.10.0",
-        "favicons-webpack-plugin": "0.0.9",
+        "favicons-webpack-plugin": "6.0.0-alpha.2",
         "file-loader": "^1.1.11",
         "googleapis": "^39.1.0",
         "growl": "^1.10.0",
         "html-loader": "^0.5.5",
-        "html-webpack-plugin": "^3.2.0",
+        "html-webpack-plugin": "^5.5.0",
         "http-server": "^0.12.3",
         "mini-css-extract-plugin": "^0.5.0",
         "node-sass": "^4.14.1",
@@ -54,7 +54,7 @@
         "style-loader": "^0.20.3",
         "url-loader": "^1.1.2",
         "webpack": "^4.41.2",
-        "webpack-cli": "^3.3.10",
+        "webpack-cli": "^3.3.12",
         "webpack-dev-server": "^3.11.0"
     }
 }
